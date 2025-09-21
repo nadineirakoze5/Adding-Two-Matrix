@@ -28,25 +28,18 @@ public class Main {
             System.out.println();
         }
 
+        int [][] result = new int[2][2];
 
-        /*
-        int a= matrixA[0][0] * matrixB[0][0] + matrixA[0][1] * matrixB[1][0];
-        int b= matrixA[0][0] * matrixB[0][1] + matrixA[0][1] * matrixB[1][1];
-        int c= matrixA[1][0] * matrixB[0][0] + matrixA[1][1] * matrixB[1][0];
-        int d= matrixA[1][0] * matrixB[0][1] + matrixA[1][1] * matrixB[1][1];
-        That's for Multiplying Two Matrix
-        */
+        for (int i = 0; i < 2; i++) {
+            for (int j = 0; j < 2; j++) {
+                for (int k = 0; k < 2; k++) {
+                    result[i][j] += matrixA[i][k] * matrixB[k][j];
+                }
+            }
+        }
 
-        int a = matrixA[0][0] + matrixB[0][0];
-        int b = matrixA[0][1] + matrixB[0][1];
-        int c = matrixA[1][0] + matrixB[1][0];
-        int d = matrixA[1][1] + matrixB[1][1];
 
-        int [][] result = { {a,b},
-                {c,d}
-        };
-
-        System.out.println(" After Adding matrix A and matrix B, we get: ");
+        System.out.println(" After Multiplying matrix A and matrix B, we get: ");
 
         for(int i=0 ; i< 2; i++) {
             for (int j = 0; j < 2; j++) {
